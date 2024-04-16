@@ -8,6 +8,8 @@
 6 CPs: 2/3 3-4 hw sets + 1/3 Final Exam at 23 Jul <br>
 
 ## Introduction
+1. A walk-through of NLP history
+2. 
 
 ## Neural networks and small language models
 
