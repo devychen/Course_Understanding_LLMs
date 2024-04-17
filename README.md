@@ -12,6 +12,7 @@ Percy Liang's Lab [Standford CS324](https://stanford-cs324.github.io/winter2022/
 Ryan Cotterell’s lab [S24](https://rycolab.io/classes/llm-s24/) <br>
 Michael Franke [Pragmatic NLG with Neural Language Models](https://michael-franke.github.io/npNLG/000-intro.html) <br>
 Andrej Karpathy [1hr Talk Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) <br>
+We also highly recommend Brian Christian’s book [The Alignment Problem](https://brianchristian.org/the-alignment-problem/) for a more general perspective on AI and computational CogSci.
 
 ## Introduction
 1. A walk-through of NLP history
