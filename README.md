@@ -15,7 +15,8 @@ Andrej Karpathy [1hr Talk Intro to Large Language Models](https://www.youtube.co
 We also highly recommend Brian Christian’s book [The Alignment Problem](https://brianchristian.org/the-alignment-problem/) for a more general perspective on AI and computational CogSci.
 
 ## Introduction
-1. A walk-through of NLP history
+- A walk-through of NLP history
+- Zhao ea 23 [A Survey of LLMs](https://arxiv.org/pdf/2303.18223.pdf)
 
 ## Neural networks and small language models
 - Pytorch key features
