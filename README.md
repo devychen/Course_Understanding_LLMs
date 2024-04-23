@@ -16,9 +16,12 @@ We also highly recommend Brian Christian’s book [The Alignment Problem](https:
 
 ## Introduction
 1. A walk-through of NLP history
-2. 
 
 ## Neural networks and small language models
+- Pytorch key features
+  - High-level framework for ML
+- Feed forward NN
+- 
 
 ## Transformers
 
