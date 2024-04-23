@@ -1,7 +1,7 @@
 # ULLM Notes
 
 [Course webbook](https://cogsciprag.github.io/Understanding-LLMs-course/intro.html) and its [github source](https://github.com/CogSciPrag/Understanding-LLMs-course/tree/main?tab=readme-ov-file) <br>
-[Slides access shortcut](https://github.com/CogSciPrag/Understanding-LLMs-course/tree/main/understanding-llms/lectures) <br>
+[Slides access shortcut](https://github.com/CogSciPrag/Understanding-LLMs-course/tree/main/understanding-llms/lectures), or on [Moodle](https://moodle.zdv.uni-tuebingen.de/course/view.php?id=752) <br>
 [Tutorials shortcut](https://github.com/CogSciPrag/Understanding-LLMs-course/tree/main/understanding-llms/tutorials) <br>
 
 #### Grades
