@@ -1,4 +1,4 @@
-# Assign_ULLM
+# ULLM Notes
 
 [Course webbook](https://cogsciprag.github.io/Understanding-LLMs-course/intro.html) and its [github source](https://github.com/CogSciPrag/Understanding-LLMs-course/tree/main?tab=readme-ov-file) <br>
 [Slides access shortcut](https://github.com/CogSciPrag/Understanding-LLMs-course/tree/main/understanding-llms/lectures) <br>
