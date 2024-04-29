@@ -1,0 +1,31 @@
+surname,model
+Aa-Al,Llama-3 8b
+Am-Az,Llama-2 70b chat
+Ba-Bd,BERT base
+Be-Bf,Mamba
+Bg-Ca,RoBERTa
+Cb-Chen,Qwen-1.5-MoE
+Chem-Da,Gpt-3-5 (instruct)
+Db-Ez,Gemini 1.5
+Ga-Gon,Cohere cmd-r+
+Gom-Han,Microsoft Phi-2
+Hao-Ho,Mixtral
+Hp-Ka,Google Palm-2
+Kb-Ko,Bloom
+Kp-La,Vicuna
+Li,Mistral-instruct version 2
+Lie-Liz,Llama-3 70b
+Lj-Ma,JetMoE-8b
+Mb-Mz,Mixtral-instruct
+Na-Ni,Mistral
+Nj-Po,Grok 1.5
+Pp-Pz,Llama-2 70b
+Ra-Rz,H2O danube
+Sa-Sch,Google Gemma
+Sd-St,FLAN-T5-xxl
+Su-Te,BitNet
+Tf-Tz,Jamba
+U-Ve,Falcon 40b
+Vf-Wz,DBRX
+X-Yi,WizardLM
+Yj-Zz,Anthropic Claude 3
