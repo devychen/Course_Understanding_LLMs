@@ -26,6 +26,8 @@ We also highly recommend Brian Christian’s book [The Alignment Problem](https:
 - RNN
 
 ## Transformers
+- LSTM
+- Transformers
 
 ## Large language models, prompting & fine-tuning
 
