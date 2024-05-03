@@ -23,9 +23,9 @@ We also highly recommend Brian Christian’s book [The Alignment Problem](https:
   - High-level framework for ML
 - Feed forward NN
   - Extra: [1](https://deepai.org/machine-learning-glossary-and-terms/feed-forward-neural-network) ,[2](https://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/Architecture/feedforward.html)
-- RNN
 
 ## Transformers
+- RNN
 - LSTM
 - Transformers
 
