@@ -6,6 +6,20 @@ Please answer the following exercises. Importantly, please reason step by step; 
 2. Pick one of the four sentences in $C$. Formulate the probability of that sentence in the form of the chain rule. 
 Calculate the probability of each termn in the chain rule, given the corpus.
 
+the cat sleeps
+the mouse sings
+the cats sleeps
+a dog sings
+1. $ V={"The", "cat", "sleeps", "mouse", "sings", "dog"} $
+2. S = {"The cat sleeps"}
+$ P(the) = $
+$ P(cat) = \frac{3}{12} = \frac{1}{4} = 0.25 $
+$ P(sleeps) \frac $
+$ P(cat|The) =  \frac$
+$ P(sleeps|cat) = \frac $
+$ P("The cat sleeps") = \frac $
+$$
+
 [4pts] We want to train a neural network that takes as input two numbers $x1, x2$
 , passes them through three hidden linear layers, each with 13 neurons, each followed by the ReLU activation function, and outputs three numbers $y1, y2, y3$
 . Write down all weight matrices of this network with their dimensions. 
