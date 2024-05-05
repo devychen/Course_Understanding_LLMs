@@ -1,4 +1,4 @@
-# ULLM Notes
+# Course Notes
 
 [Course webbook](https://cogsciprag.github.io/Understanding-LLMs-course/intro.html) and its [github source](https://github.com/CogSciPrag/Understanding-LLMs-course/tree/main?tab=readme-ov-file) <br>
 [Slides access shortcut](https://github.com/CogSciPrag/Understanding-LLMs-course/tree/main/understanding-llms/lectures), or on [Moodle](https://moodle.zdv.uni-tuebingen.de/course/view.php?id=752) <br>
@@ -19,15 +19,19 @@ We also highly recommend Brian Christian’s book [The Alignment Problem](https:
 - Zhao.ea-23 [A Survey of LLMs](https://arxiv.org/pdf/2303.18223.pdf) ❗️❗️❗️
 
 ## Neural networks and small language models
-- Pytorch key features
-  - High-level framework for ML
-- Feed forward NN
-  - Extra: [1](https://deepai.org/machine-learning-glossary-and-terms/feed-forward-neural-network) ,[2](https://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/Architecture/feedforward.html)
+### Feed forward NN
+
+
+### Some help hands
+[An article about FFNN from DeepAI](https://deepai.org/machine-learning-glossary-and-terms/feed-forward-neural-network) <br>
+[An article about FFNN from Stanford](https://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/Architecture/feedforward.html)<br>
+[An article](https://www.v7labs.com/blog/neural-network-architectures-guide): The Essential Guide to Neural Network Architectures <br>
+[An article about weights](https://python-course.eu/machine-learning/neural-networks-structure-weights-and-matrices.php): Neural Networks, Structure, Weights and Matrices
 
 ## Transformers
-- RNN
-- LSTM
-- Transformers
+### RNN
+### LSTM
+### Transformers
 
 ## Large language models, prompting & fine-tuning
 
