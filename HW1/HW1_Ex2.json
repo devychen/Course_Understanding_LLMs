@@ -1,0 +1,34 @@
+{
+    "model_name": "Qwen-1.5-MoE",
+    "huggingface_model_id": "",
+    "paper_url": "https://arxiv.org/abs/2309.16609",
+    "tokenizer_type": "BPE",
+    "vocabulary_size": "151936",
+    "architecture": "Mixture of Experts",
+    "architecture_type": "decoder-only",
+    "architecture_quirks": [
+        "Utilise mixture of experts architecture",
+        "Large number of hidden layers (24)",
+        "Customised attention mechanisms",
+        "..."
+    ],
+    "parameters": "14.3B",
+    "finetuning_type": "RLHF",
+    "training_data_cutoff": "",
+    "number_training_tokens": "",
+    "pretraining_data_size": "",
+    "finetuning_data_size": "XXX",
+    "training_data": [
+        "Books corpus",
+        "Codes",
+        "Web texts",
+        "..."
+    ],
+    "finetuning_data": [
+        "XXX",
+        "XXX",
+        "..."
+    ],
+    "access": "open",
+    "summary": "Qwen-1.5-MoE is a large-scale model developed for chat applications, utilizing a mixture of experts architecture with custom attention mechanisms. It is characterized by a large number of hidden layers and employs sparse attention mechanisms for efficient computation. The model demonstrates strong performance in generating coherent and contextually relevant responses."
+}
