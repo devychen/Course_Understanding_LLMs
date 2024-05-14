@@ -17,7 +17,7 @@
     "training_data_cutoff": "",
     "number_training_tokens": "",
     "pretraining_data_size": "",
-    "finetuning_data_size": "XXX",
+    "finetuning_data_size": "",
     "training_data": [
         "Books corpus",
         "Codes",
@@ -25,8 +25,8 @@
         "..."
     ],
     "finetuning_data": [
-        "XXX",
-        "XXX",
+        "...",
+        "...",
         "..."
     ],
     "access": "open",
