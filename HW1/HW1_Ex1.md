@@ -10,9 +10,7 @@ Calculate the probability of each term in the chain rule, given the corpus.
 
 **Answer** <br>
 (a) <br>
-```math
-V={"The", "cat", "sleeps", "mouse", "sings", "dog"} 
-```
+$ V={"The", "cat", "sleeps", "mouse", "sings", "dog"} $ <br>
 (b) <br>
 $ S = {"The\ cat\ sleeps"} $ <br>
 $ P(The) = \frac{3}{12} = 0.25$ <br>
