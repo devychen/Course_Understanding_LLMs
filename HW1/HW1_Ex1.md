@@ -10,7 +10,7 @@ Calculate the probability of each term in the chain rule, given the corpus.
 
 **Answer** <br>
 (a) <br>
-```{math} 
+```math
 V={"The", "cat", "sleeps", "mouse", "sings", "dog"} 
 ```
 (b) <br>
