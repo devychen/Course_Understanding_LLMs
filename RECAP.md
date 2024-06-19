@@ -78,7 +78,7 @@ Instead of using the entire dataset, SDG uses random subsets (mini-batches) of d
     - Output layer: produce the final outputs
 - Connections (**weights**): an associated weight that determines the strength and direction of influence from a neuron's input to its output. *Learnign in NNs are generally just adjusting these weights to improve performance.*
 2. Types
-- FNN (Feedforward neural networks): info flows in one-direction: input-hidden-output
+- FFNN (Feedforward neural networks): info flows in one-direction: input-hidden-output
 - RNN (Recurrent ~): designed to process sequential data where the output depends on the current & **past** input
 - CNN (Convolutional ~): specilised for processing grid-like data (e.g. images, videos)
 
@@ -107,12 +107,40 @@ $V$: vocabulary, set of tokens <br>
     - professor forcing: combine teacher forcing with adversarial training
     - decoding-based: use prediction function (decoding scheme) to optimize based on actual output
         - pure, greedy, softmax, top-k, top-p sampling, & beam search
+6. Comparisons
+    - auto-regressive LM: one that only has access to the previous tokens (and outputs become inputs)
+        - Evaluation: perplexity
+    -  masked LLM: can peak ahed too, it masks a word within the context (e.g. the centre word)
+        - Evaluation: downstream NLP tasks that use the learned embeddings
 
 ## 2 RNN
-1. Training RNN: Input embedding (convert words to vectors) $\rightarrow$ RNN Processing (update hidden states with each word) $\rightarrow$ Softmax over vocab (use final hidden state and softmax over vocabulary to compute next word probabilities) $\rightarrow$ Calculate loss (compare predicted next word with actual next word) $\rightarrow$ Backprogagate and update (backpropagate the error through the network and update parameters)
+1. Training RNN: 
+- Input embedding (convert words to vectors) $\rightarrow$ RNN Processing (update hidden states with each word) $\rightarrow$ Softmax over vocab (use final hidden state and softmax over vocabulary to compute next word probabilities) $\rightarrow$ Calculate loss (compare predicted next word with actual next word) $\rightarrow$ Backprogagate and update (backpropagate the error through the network and update parameters)
 ![image](/pics/RNN.png)
+2. Mind the dimensionality
+3. Strength: 
+    - Can handle infinite-length sequences (vs. just a fixed-window)
+    - Has a memory of the context (thanks to the hidden layer's recurrent loop)
+    - Same weights used for all inputs, so positionality is not overwritten (like in FFNN)
+    > *Help capture more context while avoiding sparsity, storage, and compute issues* <br>
+    > Done so by maintaing a hidden state that carries forward info from previous **time steps**, thus effectively capturing dependencies over time. <br>
+    Unlike traditional models that rely on large, sparse feature representations, RNNs work with <ins>compact continuous embeddings</ins>, reducing storage needs <br>
+    Its recurrent stucture allows it to <ins>share parameters across different time steps</ins>, which decreases computational complexity. <br>
+    Thus, this design enables RNNs to model sequential data efficiently, capturing long-term dependencies without the overhead of storing extensive historical data or the need for large, sparse matrices.
+    - **Time step**: the processing of a single word, incl. updates its hidden state, and moves to the next element. 
+4. Issues
+    - BPTT is slow to train
+    - Due to infinite sequence, gradients can easily vanish or explode
+    - Has trouble actually making use of long-range context
+5. Hidden layer is the core of its contextual learning of words within sequences.
+ > At each time step, the hidden layer updates its state based on the current input & previous hidden state, effectively summarising past info relevant to the current position in the sequence. This dynmamic updating allows the hidden layer to carry forward <ins>the semantic and syntactic context of words</ins>, thereby representing <ins>not just the individual word's meaning but its meaning in relation to the entire sequence</ins>.
 
-## 3 LSTM 
+## 3 LSTM Long Short-Term Memory
+> A type of RNN that is designed to better handle **long-range dependencies** (长距离依赖性（long-range dependency）特指序列中远距离位置上的元素之间的依赖关系)
+- Why proposed? 
+    - Backpropagation through time (BPTT) process is expensive, instead of updating weights (adjusted to minise the loss by propagating errors backward through the network) after every time step (ie. every word), we do <ins>every T step</ins> (e.g. every sentence or paragraph). <br>
+    - > Note that it's not equavalent to using only a T window size (n-gram) because we still have "infinite memory".
+- The **vanishing gradient** in BPTT: the long path of multiplification makes gradient diminishes/increase exponentially, become either really small (then the far-away context will be "forgotten") or large (then the recency bias and no context - 指太关注最近的输入而忽略更圆的上下文)
 
 ## 3 Transformers
 
