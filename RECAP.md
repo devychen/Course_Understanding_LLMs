@@ -47,9 +47,10 @@ Instead of using the entire dataset, SDG uses random subsets (mini-batches) of d
     - For Cross-Entropy Loss, compute the logarithm of the predicted probabilities, multiply by the actual class indicators, sum these values, and take the negative average.
 - Aggregate: if using mini-batches in SGD, compute loss for each batch and average them to get overall.
 
-### Gradient
+### Gradient (of the loss)
 > Vectors of partial derivatives of the loss function with respect to the model parameters. <br>
-> It suggests the rate and direction to update the parameters (in the direction opposite to the gradient, $<0$ increase, $>0$ decrease) in order to minimise the loss function. 
+> It suggests the rate and direction to update the parameters (in the direction opposite to the gradient, $<0$ increase, $>0$ decrease) in order to minimise the loss function. <br>
+> Matrix: $\frac{\partial L}{\partial V}$
 - Define: specify the loss function first.
 - Compute: compute the partial derivatives of the loss function with respect to each model parameter $\theta_j$​. The gradient is a vector of these partial derivatives.
 - Update: use gradients to adject parameters - This is typically done using an optimization algorithm like Stochastic Gradient Descent (SGD).
@@ -122,25 +123,36 @@ $V$: vocabulary, set of tokens <br>
     - Can handle infinite-length sequences (vs. just a fixed-window)
     - Has a memory of the context (thanks to the hidden layer's recurrent loop)
     - Same weights used for all inputs, so positionality is not overwritten (like in FFNN)
-    > *Help capture more context while avoiding sparsity, storage, and compute issues* <br>
-    > Done so by maintaing a hidden state that carries forward info from previous **time steps**, thus effectively capturing dependencies over time. <br>
-    Unlike traditional models that rely on large, sparse feature representations, RNNs work with <ins>compact continuous embeddings</ins>, reducing storage needs <br>
-    Its recurrent stucture allows it to <ins>share parameters across different time steps</ins>, which decreases computational complexity. <br>
-    Thus, this design enables RNNs to model sequential data efficiently, capturing long-term dependencies without the overhead of storing extensive historical data or the need for large, sparse matrices.
-    - **Time step**: the processing of a single word, incl. updates its hidden state, and moves to the next element. 
+        > *Help capture more context while avoiding sparsity, storage, and compute issues* <br>
+        > Done so by maintaing a hidden state that carries forward info from previous **time steps**, thus effectively capturing dependencies over time. (**Time step**: the processing of a single word, incl. updates its hidden state, and moves to the next element.) <br>
+        > Unlike traditional models that rely on large, sparse feature representations, RNNs work with <ins>compact continuous embeddings</ins>, reducing storage needs <br>
+        > Its recurrent stucture allows it to <ins>share parameters across different time steps</ins>, which decreases computational complexity. <br>
+        > Thus, this design enables RNNs to model sequential data efficiently, capturing long-term dependencies without the overhead of storing extensive historical data or the need for large, sparse matrices.
 4. Issues
     - BPTT is slow to train
     - Due to infinite sequence, gradients can easily vanish or explode
     - Has trouble actually making use of long-range context
 5. Hidden layer is the core of its contextual learning of words within sequences.
- > At each time step, the hidden layer updates its state based on the current input & previous hidden state, effectively summarising past info relevant to the current position in the sequence. This dynmamic updating allows the hidden layer to carry forward <ins>the semantic and syntactic context of words</ins>, thereby representing <ins>not just the individual word's meaning but its meaning in relation to the entire sequence</ins>.
+    > At each time step, the hidden layer updates its state based on the current input & previous hidden state, effectively summarising past info relevant to the current position in the sequence. This dynmamic updating allows the hidden layer to carry forward <ins>the semantic and syntactic context of words</ins>, thereby representing <ins>not just the individual word's meaning but its meaning in relation to the entire sequence</ins>.
 
 ## 3 LSTM Long Short-Term Memory
-> A type of RNN that is designed to better handle **long-range dependencies** (长距离依赖性（long-range dependency）特指序列中远距离位置上的元素之间的依赖关系)
+> A type of RNN that is capable of learning **long-range dependencies** (长距离依赖性（long-range dependency）特指序列中远距离位置上的元素之间的依赖关系)
 - Why proposed? 
-    - Backpropagation through time (BPTT) process is expensive, instead of updating weights (adjusted to minise the loss by propagating errors backward through the network) after every time step (ie. every word), we do <ins>every T step</ins> (e.g. every sentence or paragraph). <br>
-    - > Note that it's not equavalent to using only a T window size (n-gram) because we still have "infinite memory".
-- The **vanishing gradient** in BPTT: the long path of multiplification makes gradient diminishes/increase exponentially, become either really small (then the far-away context will be "forgotten") or large (then the recency bias and no context - 指太关注最近的输入而忽略更圆的上下文)
+    - Traditional RNNs struggle with long-term dependencies due to issues like **vanishing/exploding gradient**.
+        > The **vanishing gradient** in BPTT: the long path of multiplification makes gradient diminishes/increase exponentially, become either really small (then the far-away context will be "forgotten") or large (then the recency bias and no context - 指太关注最近的输入而忽略更远的上下文)
+    - Instead of updating weights (adjusted to minise the loss by propagating errors backward through the network) after every time step (ie. every word), we do <ins>every T step</ins> (e.g. every sentence or paragraph). <br>
+    - *Note that it's not equavalent to using only a T window size (n-gram) because we still have "infinite memory".*
+- Intuition
+    - Use two separate paths to make predictions: long-term & short-term
+    - Use sigmoid & tanh activation function
+        > Sigmoid: turns any input into number between $0$ and $1$ <br>
+        > Tanh: into $-1$ and $1$
+    ![image](/pics/afunction.png)
+    - A memory cell that maintains information over time, and three gates (**input, forget, output gates**) that regulate the flow of information.
+        - **input gate** controls what new info is stored in cell
+        - **forget gate** determins what info is discarded
+        - **output gate** decided what part of the cell state is used to compute the output
+        - **cell state** runs all the way across the top of the unit, represents the long-term memory  
 
 ## 3 Transformers
 
