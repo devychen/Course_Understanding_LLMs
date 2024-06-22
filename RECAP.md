@@ -201,7 +201,7 @@ General Idea:<br>
     - Recerived **attention input**: a decoder state $h_t$ and all encoder states $s_1, s_2, ..., s_m$;
     - Computes **attention scores**: <br>
     For each encoder state $s_k$, attention computes its "relevance" for this decoder state $h_t$. Formally, it applies an attention function which receives one decoder state and one encoder state and returns a scalar value $score(h_t, s_k)$;
-    > Attention scoure doesn't have to be produced by FFNN, it can be any function.
+        > Attention scoure doesn't have to be produced by FFNN, it can be any function.
     - Computes attention weights: a probability distribution - softmax applied to attention scores;
     - Computes attention output: the weighted sum of encoder states with attention weights
 4. Summary of computation <br>
@@ -226,7 +226,7 @@ General Idea:<br>
     - Under the hood, each $x_i$ has 3 small, associated vectors: $x_1$ has query $q_1$, key $k_1$, value $v_1$
     - Step 2: For word $x_1$, let's calculate the scores $s_1, s_2, s_3, s_4$, which represent how much attention to pay to each respective word $v_i$
     - Step 3: $s_1, s_2, s_3, s_4$ don't sum to 1. Let's divide by $\sqrt{len(k_i)}$ and softmax it and get the $a_i$
-    - Step 4: Weight $v_i$ vectors and simply sum them up: $ z_2 = a_1 * v_1 + a_2 * v_2 + a_3 * v_3 + a_4 * v_4 $
+    - Step 4: Weight $v_i$ vectors and simply sum them up: $z_2 = a_1v_1 + a_2v_2 + a_3v_3 + a_4v_4$
     - Strength
         - Context-aware
         - Much more powerful than static embeddings
