@@ -219,19 +219,14 @@ General Idea:<br>
     - Goal: to create great representations $z_i$ of the input; 
     - i.e. to weigh the importance of different words in the input sequence
 2. Calculation steps:
-    - Step 1: our self-attention head has just 3 $weights$ matrices $W_1, W_k, W_v$ in total, which are multiplied by each $x_1$ to create all vectors :
-    $$
-    q_i = w_q x_i \\
-    k_i = w_k x_i \\
-    v_i = w_v x_i \\
-    $$
+    - Step 1: our self-attention head has just 3 $weights$ matrices $W_1, W_k, W_v$ in total, which are multiplied by each $x_1$ to create all vectors :<br>
+        - $q_i = w_q x_i$ <br>
+        - $k_i = w_k x_i$ <br>
+        - $v_i = w_v x_i$ <br>
     - Under the hood, each $x_i$ has 3 small, associated vectors: $x_1$ has query $q_1$, key $k_1$, value $v_1$
     - Step 2: For word $x_1$, let's calculate the scores $s_1, s_2, s_3, s_4$, which represent how much attention to pay to each respective word $v_i$
     - Step 3: $s_1, s_2, s_3, s_4$ don't sum to 1. Let's divide by $\sqrt{len(k_i)}$ and softmax it and get the $a_i$
-    - Step 4: Weight $v_i$ vectors and simply sum them up:
-    $
-    z_2 = a_1 * v_1 + a_2 * v_2 + a_3 * v_3 + a_4 * v_4   
-    $
+    - Step 4: Weight $v_i$ vectors and simply sum them up: $ z_2 = a_1 * v_1 + a_2 * v_2 + a_3 * v_3 + a_4 * v_4 $
     - Strength
         - Context-aware
         - Much more powerful than static embeddings
