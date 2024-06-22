@@ -21,7 +21,9 @@ Instead of using the entire dataset, SDG uses random subsets (mini-batches) of d
 
 ### loss function
 > function to calculate the loss - the differences between model preduction values and actual target values
-- Define: MSE $ = \frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2$ or Cross-entropy loss = $-\frac{1}{n} \sum_{i=1}^n \sum_{j=1}^c y_{ij} \log(\hat{y}_{ij})$
+- Define: MSE or Cross-entropy loss
+    - MSE = $\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2$
+    - Cross-entropy loss = $-\frac{1}{n} \sum_{i=1}^n \sum_{j=1}^c y_{ij} \log(\hat{y}_{ij})$
 - Compute: use model to generate predictions based on current parameters.
 - Apply: calculate loss 
     - For MSE, compute the squared differences between predicted and actual values, then average them.
