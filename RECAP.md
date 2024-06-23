@@ -353,8 +353,13 @@ General Idea:<br>
 
 
 ## 5 Fine-tuning
+1. Supervised FT
+2. Instuction FT
 
-## 5 RLHF
+
+## 5 Reinforcement Learning from Human Feedback *(RLHF)*
+
+
 
 ## 6 Agents
 
