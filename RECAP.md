@@ -19,7 +19,7 @@ This function provides a measure of how well the model is performing, with the g
 **Stochastic Gradient Descent (SGD)** is then employed to iteratively adjust the model's parameters.
 Instead of using the entire dataset, SDG uses random subsets (mini-batches) of data to perform these updates, making the optimisation process more computatioanlly eifficient and allowing the model to converge more quicly to a minimum loss. Through repeated cycles of these steps - calculating the loss, determining the gradients, and updating the parameters via backpropagation and SDG - the probabilistic model becomes increasingly accurate in making predictions.
 
-### loss function
+### Loss function
 > function to calculate the loss - the differences between model preduction values and actual target values
 - Define: MSE or Cross-entropy loss
     - MSE = $\frac{1}{n} \sum_{i=1}^n (y_i - \hat{y}_i)^2$
@@ -352,18 +352,5 @@ General Idea:<br>
     > A method of organizing and representing information hierarchically, resembling a tree structure where each node represents a concept or idea, and branches depict relationships or connections between these concepts.
 
 
-## 5 Fine-tuning
-1. Supervised FT
-2. Instuction FT
 
-
-## 5 Reinforcement Learning from Human Feedback *(RLHF)*
-
-
-
-## 6 Agents
-
-## 7 Probing Attribution
-
-## 8 Behavioral assessment
 
