@@ -352,5 +352,4 @@ General Idea:<br>
     > A method of organizing and representing information hierarchically, resembling a tree structure where each node represents a concept or idea, and branches depict relationships or connections between these concepts.
 
 
-
-
+See the [latex](https://www.overleaf.com/project/664385490dd66641f83b86e5) for the complete version.
