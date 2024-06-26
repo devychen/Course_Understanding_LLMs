@@ -17,28 +17,14 @@ We also highly recommend Brian Christian’s book [The Alignment Problem](https:
 - A walk-through of NLP history
 - Zhao.ea-23 [A Survey of LLMs](https://arxiv.org/pdf/2303.18223.pdf) ❗️❗️❗️
 
-## Neural networks and small language models
-### Feed forward NN
-
-
 ### Some help hands
 [An article about FFNN from DeepAI](https://deepai.org/machine-learning-glossary-and-terms/feed-forward-neural-network) <br>
 [An article about FFNN from Stanford](https://cs.stanford.edu/people/eroberts/courses/soco/projects/neural-networks/Architecture/feedforward.html)<br>
 [An article](https://www.v7labs.com/blog/neural-network-architectures-guide): The Essential Guide to Neural Network Architectures <br>
 [An article about weights](https://python-course.eu/machine-learning/neural-networks-structure-weights-and-matrices.php): Neural Networks, Structure, Weights and Matrices
 
-## Transformers
-### RNN
-### LSTM
-### Transformers
-
-## Large language models, prompting & fine-tuning
-
-## Probing & attribution
-
-## Evaluation
-
-## Mechanistic interpretability
+## Lecture Notes
+On overleaf, link [here](https://www.overleaf.com/project/664385490dd66641f83b86e5)
 
 ## Additional Notes
 - Pytorch requries one to specify which to track.
