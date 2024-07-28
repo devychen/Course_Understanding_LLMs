@@ -24,7 +24,7 @@ We also highly recommend Brian Christian’s book [The Alignment Problem](https:
 [An article about weights](https://python-course.eu/machine-learning/neural-networks-structure-weights-and-matrices.php): Neural Networks, Structure, Weights and Matrices
 
 ## Lecture Notes
-On overleaf, link [here](https://www.overleaf.com/project/664385490dd66641f83b86e5)
+On overleaf, view availabe [here](https://www.overleaf.com/read/sfrqzfkhvxgh#fbea6b)
 
 ## Additional Notes
 - Pytorch requries one to specify which to track.
